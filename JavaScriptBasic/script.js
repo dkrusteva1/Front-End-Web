@@ -88,7 +88,6 @@ console.log(infoDates);
 
 //task 4
 
-
 let arrayDays = ["неделя", "понеделник", "вторник", "сряда", "четвъртък", "петък", "събота"];
 let concatenatedArray = new Array(2);
 let newDate = new Date();
