@@ -87,9 +87,14 @@ console.log(infoDates);
 
 
 //task 4
+function addZeroBefore(n) {
+    if (n < 10) {
+        return "0" + n.toString();
+    } else return n.toString();
+}
 
 let arrayDays = ["неделя", "понеделник", "вторник", "сряда", "четвъртък", "петък", "събота"];
 let concatenatedArray = new Array(2);
 let newDate = new Date();
-concatenatedArray[0] = `Дата: ${dateArray[0].getFullYear()}.${dateArray[0].getMonth()}.${dateArray[0].getDate()}, час: ${dateArray[0].getHours()}:${dateArray[0].getMinutes()}:${dateArray[0].getSeconds()}, ${arrayDays[infoDates[0]]}. ${infoDates[1]} дни`;
-concatenatedArray[1] = `Дата: ${dateArray[1].getFullYear()}.${dateArray[1].getMonth()}.${dateArray[1].getDate()}, час: ${dateArray[1].getHours()}:${dateArray[1].getMinutes()}:${dateArray[1].getSeconds()}, ${arrayDays[infoDates[2]]}. ${infoDates[3]} дни`;
+concatenatedArray[0] = `Дата: ${dateArray[0].getFullYear()}.${dateArray[0].getMonth()}.${addZeroBefore(dateArray[0].getDate())}, час: ${addZeroBefore(dateArray[0].getHours())}:${addZeroBefore(dateArray[0].getMinutes())}:${dateArray[0].getSeconds()}, ${arrayDays[infoDates[0]]}. ${infoDates[1]} дни`;
+concatenatedArray[1] = `Дата: ${dateArray[1].getFullYear()}.${dateArray[1].getMonth()}.${dateArray[1].getDate()}, час: ${addZeroBefore(dateArray[1].getHours())}:${addZeroBefore(dateArray[1].getMinutes())}:${addZeroBefore(dateArray[1].getSeconds())}, ${arrayDays[infoDates[2]]}. ${infoDates[3]} дни`;
